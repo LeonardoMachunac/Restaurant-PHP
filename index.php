@@ -61,9 +61,9 @@
         </section>
 
 
-        <section>
+        <section id="id" class="container mt-4 text-center">
             
-                <div class="jumbotron bg-dark text-while">
+                <div class="jumbotron bg-dark text-white">
                     <br/>
                         <h2>Bienvendo al Restaurante</h2>
                         <p>Descubre una experiencia culinaria unica.</p>
@@ -71,6 +71,8 @@
                 </div>
 
         </section>
+
+        parte centrar
 
         
 
