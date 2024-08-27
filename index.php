@@ -66,7 +66,7 @@
                 <div class="jumbotron bg-dark text-while">
                     <br/>
                         <h2>Change the background</h2>
-                        <p>Descubre una experiencia culinaria unica.</p>
+                        <p>Descubre una experiencia culinaria unica</p>
                     <br/>
                 </div>
 
