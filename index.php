@@ -72,7 +72,19 @@
 
         </section>
 
-        parte centrar
+        <section id="chefs" class="container mt-4">
+            <h2>Nuestros Chefs</h2>
+                <div>
+                    <div class="col-md.4">
+                        <div class="card">
+                            <img src="img/colaboradores/team-image1.jpg" alt="">
+                        </div>
+
+                    </div>
+                </div>
+        
+
+        </section>
 
         
 
