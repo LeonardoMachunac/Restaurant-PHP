@@ -82,7 +82,7 @@
 
         <section id="chefs" class="container mt-4 text-center">
             <h2>Nuestros Chefs</h2>
-                <div>
+                <div class="row">
                     <div class="col-md-4">
                         <div class="card">
                             <img src="img/colaboradores/team-image1.jpg" class="card-img-top" alt="Chef 1"/>
@@ -104,6 +104,55 @@
                         </div>
 
                     </div>
+
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img/colaboradores/team-image2.jpg" class="card-img-top" alt="Chef 1"/>
+
+                            <div class="card-body">
+                        <h5 class="card-title">Chef 2</h5>
+                            <p class="card-text">La Chef Luisa.</p>
+
+                            <div class="social-icons mt-3">
+                                <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
+
+                            </div>
+
+                        </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img/colaboradores/team-image3.jpg" class="card-img-top" alt="Chef 1"/>
+
+                            <div class="card-body">
+                        <h5 class="card-title">Chef 3</h5>
+                            <p class="card-text">La Chef Karla.</p>
+
+                            <div class="social-icons mt-3">
+                                <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
+
+                            </div>
+
+                        </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
                 </div>
 
                     
