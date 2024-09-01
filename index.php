@@ -108,7 +108,7 @@
 
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="img/colaboradores/team-image2.jpg" class="card-img-top" alt="Chef 1"/>
+                            <img src="img/colaboradores/team-image2.jpg" class="card-img-top" alt="Chef 2"/>
 
                             <div class="card-body">
                         <h5 class="card-title">Chef 2</h5>
@@ -131,7 +131,7 @@
 
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="img/colaboradores/team-image3.jpg" class="card-img-top" alt="Chef 1"/>
+                            <img src="img/colaboradores/team-image3.jpg" class="card-img-top" alt="Chef 3"/>
 
                             <div class="card-body">
                         <h5 class="card-title">Chef 3</h5>
