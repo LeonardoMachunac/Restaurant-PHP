@@ -75,13 +75,30 @@
         <section id="chefs" class="container mt-4">
             <h2>Nuestros Chefs</h2>
                 <div>
-                    <div class="col-md.4">
+                    <div class="col-md-4">
                         <div class="card">
-                            <img src="img/colaboradores/team-image1.jpg" alt="">
+                            <img src="img/colaboradores/team-image1.jpg" class="card-img-top" alt="Chef 1"/>
+
+                            <div class="card-body">
+                        <h5 class="card-title">Chef 1</h5>
+                            <p class="card-text">Some quick content.</p>
+
+                            <div class="social-icons mt-3">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+
+                            </div>
+
+                        </div>
+
+
                         </div>
 
                     </div>
                 </div>
+
+                    
         
 
         </section>
