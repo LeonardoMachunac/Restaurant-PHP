@@ -16,11 +16,19 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+
+
+
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="#">Restaurante La Sombra</a>
+
+                <a class="navbar-brand" href="#"> <i class="fas fa-utensils"></i>   Restaurante La Sombra</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -72,7 +80,7 @@
 
         </section>
 
-        <section id="chefs" class="container mt-4">
+        <section id="chefs" class="container mt-4 text-center">
             <h2>Nuestros Chefs</h2>
                 <div>
                     <div class="col-md-4">
@@ -81,12 +89,12 @@
 
                             <div class="card-body">
                         <h5 class="card-title">Chef 1</h5>
-                            <p class="card-text">Some quick content.</p>
+                            <p class="card-text">La Chef Maria.</p>
 
                             <div class="social-icons mt-3">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
 
                             </div>
 
