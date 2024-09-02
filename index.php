@@ -79,7 +79,7 @@
                 </div>
 
         </section>
-
+                <!--Inicio de Chefs-->
         <section id="chefs" class="container mt-4 text-center">
             <h2>Nuestros Chefs</h2>
                 <div class="row">
@@ -140,7 +140,9 @@
                     </div>
                 </div>
         </section>
+                    <!--Fin de testimonios-->
 
+                    <!--Inicio de testimonios-->
             <section id="testimonios" class="bg-light py-5">
                 <div class="container">
                     <h2 class="text-center mb-4">Testimonios</h2>
@@ -171,9 +173,9 @@
                     </div>
                 </div>
             </section>
+                    <!--Fin de testimonios-->
 
-
-
+                    <!--Inicio de menu-->
             <section class="container mt-4">
                 <h2 class="text-center">Menu (nuestra recomendacion) </h2>
                 <br/>
@@ -219,15 +221,10 @@
                         </div>
                     </div>
 
-
                 </div>
-
-                
-
-                
-
-
             </section>
+
+                <!--Fin de testimonios-->
             </br>
             </br>
 
