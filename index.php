@@ -157,6 +157,19 @@
 
                             </div>
                         </div>
+
+                        <div class="col-md-6 d-flex">
+                            <div class="card mb-4 w-100">
+                                <div class="card-body">
+                                    <p class="card-text">Excelte  comida</p>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    Luis AF
+
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
 
