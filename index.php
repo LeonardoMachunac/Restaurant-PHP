@@ -118,17 +118,10 @@
                                 <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
                                 <a href="#" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
                                 <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
-
                             </div>
-
                         </div>
-
-
                         </div>
-
                     </div>
-
-
                     <div class="col-md-4">
                         <div class="card">
                             <img src="img/colaboradores/team-image3.jpg" class="card-img-top" alt="Chef 3"/>
@@ -141,34 +134,20 @@
                                 <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
                                 <a href="#" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
                                 <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
-
                             </div>
-
                         </div>
-
-
                         </div>
-
                     </div>
-
-
-
                 </div>
-
-                    
-        
-
         </section>
 
-        
+            <section id="testimonios" class="bg-light py-5">
+                <div class="container">
+                    <h2 class="text-center mb-4">Testimonios</h2>
+                </div>
 
+            </section>
 
-
-
-        <header>
-            <!-- place navbar here -->
-        </header>
-        <main></main>
         <footer class="bg-dark text-light text-center">
 
             <p> &copy; 2024 Restaurant La Sombra, todos los derechos reservados.</p>
