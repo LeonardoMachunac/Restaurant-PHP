@@ -229,6 +229,14 @@
             </br>
 
 
+                <!--Inicio de contacto-->
+
+            <section>
+
+            </section>
+                    <!--Fin de contacto-->
+
+
         <footer class="bg-dark text-light text-center">
 
             <p> &copy; 2024 Restaurant La Sombra, todos los derechos reservados.</p>
