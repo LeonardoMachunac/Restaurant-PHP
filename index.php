@@ -231,7 +231,26 @@
 
                 <!--Inicio de contacto-->
 
-            <section>
+            <section class="container mt-4">
+                <h2>Contacto</h2>
+                    <p> Estamos aqui para servirle.</p>
+
+                    <form action="#" method="post">
+                        <label for="name">Nombre:</label><br/>
+                        <input type="text"  name="nombre" placeholder="Escribe tu nombre..." required>
+                        <br/>
+
+                        <label for="email">Correo electronico</label><br/>
+                        <input type="email" name="correo" placeholder="Escribe tu correo electronico" required/>
+                        <br/>
+
+                        <label for="message">Mensaje:</label><br/>
+                        <textarea id="message" name="mensaje" id="message" rows="6" cols="50"></textarea>
+                        <br/>
+
+                        <input type="submit" value="Enviar mensaje">
+
+                    </form>
 
             </section>
                     <!--Fin de contacto-->
