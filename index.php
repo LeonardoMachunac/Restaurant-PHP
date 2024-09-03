@@ -236,19 +236,28 @@
                     <p> Estamos aqui para servirle.</p>
 
                     <form action="#" method="post">
+                        <div class="mb-3">
                         <label for="name">Nombre:</label><br/>
-                        <input type="text"  name="nombre" placeholder="Escribe tu nombre..." required>
+                        <input type="text" class="form-control"  name="nombre" placeholder="Escribe tu nombre..." required>
+                        <br/>
+                        </div>
+
+
+                        
+                            <div class="mb-3">
+                        <label for="email">Correo electronico: </label><br/>
+                        <input type="email" class="form-control" name="correo" placeholder="Escribe tu correo electronico" required/>
                         <br/>
 
-                        <label for="email">Correo electronico</label><br/>
-                        <input type="email" name="correo" placeholder="Escribe tu correo electronico" required/>
-                        <br/>
+                        </div>
 
+                        <div class="mb-3">
                         <label for="message">Mensaje:</label><br/>
-                        <textarea id="message" name="mensaje" id="message" rows="6" cols="50"></textarea>
+                        <textarea id="message" class="form-control" name="mensaje" id="message" rows="6" cols="50"></textarea>
                         <br/>
+                        </div>
 
-                        <input type="submit" value="Enviar mensaje">
+                        <input type="submit" class="btn btn-primary" value="Enviar mensaje">
 
                     </form>
 
