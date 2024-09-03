@@ -51,6 +51,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contacto">Contacto</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#horarios">Horarios</a>
+                </li>
                 
             </ul>
         </div>
@@ -266,7 +270,7 @@
                 <br/> <br/>
                     <!--Fin de contacto-->
 
-                <div class="text-center bg-light p-4">
+                <div id="horarios" class="text-center bg-light p-4">
                     <h3 class="mb-4"> Horario de atencion</h3>
 
                     <div>
