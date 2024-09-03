@@ -262,7 +262,29 @@
                     </form>
 
             </section>
+
+                <br/> <br/>
                     <!--Fin de contacto-->
+
+                <div class="text-center bg-light p-4">
+                    <h3 class="mb-4"> Horario de atencion</h3>
+
+                    <div>
+                        <p> <strong>Lunes a Viernes </strong></p>
+                        <p> <strong>11:00 a.m. - 10:00 p.m. </strong></p>
+                    </div>
+
+                    <div>
+                        <p> <strong> Sabado </strong></p>
+                        <p> <strong>12:00 a.m. - 05:00 p.m. </strong></p>
+                    </div>
+
+                    <div>
+                        <p> <strong>Domingo </strong></p>
+                        <p> <strong> 7:00 a.m. - 2:00 p.m. </strong></p>
+                    </div>
+
+                </div>
 
 
         <footer class="bg-dark text-light text-center">
