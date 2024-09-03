@@ -56,7 +56,7 @@
         </div>
     </div>
 </nav>
-        <section id="banner" class="container-fluid p-0">
+        <section id="inicio" class="container-fluid p-0">
             <div class="banner-img" style="position: relative; background:url('img/slider-image1.jpg') center/cover no-repeat; height:400px;" >
                 <div class="banner-text" style="position:absolute;top:50%; left:50%; transform: translate(-50%,-50%); text-align:center; color:#fff;">
 
@@ -176,7 +176,7 @@
                     <!--Fin de testimonios-->
 
                     <!--Inicio de menu-->
-            <section class="container mt-4">
+            <section id="menu" class="container mt-4">
                 <h2 class="text-center">Menu (nuestra recomendacion) </h2>
                 <br/>
                 <div class="row row-cols-1 row-cols-md-4 g-4">
@@ -231,7 +231,7 @@
 
                 <!--Inicio de contacto-->
 
-            <section class="container mt-4">
+            <section id="contacto" class="container mt-4">
                 <h2>Contacto</h2>
                     <p> Estamos aqui para servirle.</p>
 
@@ -287,7 +287,7 @@
                 </div>
 
 
-        <footer class="bg-dark text-light text-center">
+        <footer class="bg-dark text-light text-center py-3">
 
             <p> &copy; 2024 Restaurant La Sombra, todos los derechos reservados.</p>
 
