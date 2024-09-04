@@ -24,9 +24,44 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col">Column</div>
-                    <div class="col">Column</div>
-                    <div class="col">Column</div>
+                    <div class="col"></div>
+
+                    <div class="col">
+                    <br><br>
+                    <div class="card text-center">
+                    
+                        <div class="card-header"> Login </div>
+                        <div class="card-body">
+                            <form action="" method="post">
+                            
+                        <div class="mb-3">
+                            <label for="" class="form-label">Usuario </label>
+                            <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder=""/>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">Password</label>
+                            <input type="password" class="form-control" name=""id=""placeholder=""/>
+                        </div>
+                        </form>
+                        
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                    
+
+                    </div>
+
+
+
+                    <div class="col"></div>
                 </div>
                 
             </div>
