@@ -32,17 +32,20 @@
                     
                         <div class="card-header"> Login </div>
                         <div class="card-body">
-                            <form action="" method="post">
+                            <form action="index.php" method="post">
                             
                         <div class="mb-3">
                             <label for="" class="form-label">Usuario </label>
-                            <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder=""/>
+                            <input type="text" class="form-control" name="usuario" id="usuario" aria-describedby="helpId" placeholder=""/>
                         </div>
 
                         <div class="mb-3">
                             <label for="" class="form-label">Password</label>
-                            <input type="password" class="form-control" name=""id=""placeholder=""/>
+                            <input type="password" class="form-control" name="password"id="password"placeholder=""/>
                         </div>
+
+                            <button type="submit" class="btn btn-primary">Entrar</button>
+                            
                         </form>
                         
 
