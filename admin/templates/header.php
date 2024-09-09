@@ -1,3 +1,8 @@
+<?php
+$url_base="http://localhost/restaurant/";
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -16,13 +21,15 @@
                 <div class="nav navbar-nav">
                     <a class="nav-item nav-link active" href="#" aria-current="page">Administrador <span class="visually-hidden">(current)</span></a>
                     
-                    <a class="nav-item nav-link" href="#">Banners</a>
-                    <a class="nav-item nav-link" href="#">Colaboradores</a>
-                    <a class="nav-item nav-link" href="#">Testimonios</a>
-                    <a class="nav-item nav-link" href="#">Menú</a>
-                    <a class="nav-item nav-link" href="#">Comentarios</a>
-                    <a class="nav-item nav-link" href="#">Cesarr Sesion</a>
+                    <a class="nav-item nav-link" href="<?php echo $url_base;?>/seccion/banners/">Banners</a>
+                    <a class="nav-item nav-link" href="<?php echo $url_base;?>/seccion/colaboradores/">Colaboradores</a>
+                    <a class="nav-item nav-link" href="<?php echo $url_base;?>/seccion/testimonios/">Testimonios</a>
+                    <a class="nav-item nav-link" href="<?php echo $url_base;?>/seccion/menu/">Menú</a>
+                    <a class="nav-item nav-link" href="<?php echo $url_base;?>/seccion/comentatio/">Comentarios</a>
+                    <a class="nav-item nav-link" href="<?php echo $url_base;?>/seccion/banners/">Cesarr Sesion</a>
                 </div>
             </nav>
             
         </header>
+
+    </body>
