@@ -1,4 +1,15 @@
-<?php include ("../../templates/header.php");?>
+<?php  
+    include ("../../bd.php");
+
+    $sentencia=$conexion->prepare("SELECT * FROM `tbl_banners`");
+    $sentencia->execute();
+    $lista_banners= $sentencia->fetchAll(PDO::FETCH_ASSOC);
+
+    // print_r($lista_banners);
+
+
+    include  ("../../templates/header.php");
+?>
 
 </br>
 
@@ -22,27 +33,25 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="">
+                        
+                            <?php
+                            foreach ($lista_banners as $key => $value) {  ?>
+                                <tr class="">
+
                             <td scope="row">1</td>
-                            <td>La Sombra</td>
-                            <td>Restaurant del mejor sabor casero</td>
-                            <td>#menu</td>
+                            <td><?php echo $value['titulo']; ?></td>
+                            <td><?php echo $value['descripcion']; ?></td>
+                            <td><?php echo $value['link']; ?></td>
                             <td>
                                 <a name=""id="" class="btn btn-info" href="editar.php"  role="button">Editar</a>
                                 <a name=""id="" class="btn btn-danger" href="#" role="button">Borrar</a>
                                 
                             </td>
-                        </tr>
-                        <tr class="">
-                            <td scope="row">2</td>
-                            <td>La Sombra</td>
-                            <td>Restaurant del mejor sabor casero</td>
-                            <td>#menu</td>
-                            <td>
-                                <a name=""id="" class="btn btn-info" href=""  role="button">Editar</a>
-                                <a name=""id="" class="btn btn-danger" href="#" role="button">Borrar</a>
-                            </td>
-                        </tr>
+                            </tr>
+                                <?php } ?>
+
+                        
+                        
                     </tbody>
                 </table>
             </div>
