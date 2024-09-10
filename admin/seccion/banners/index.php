@@ -28,7 +28,7 @@
                             <td>Restaurant del mejor sabor casero</td>
                             <td>#menu</td>
                             <td>
-                                <a name=""id="" class="btn btn-info" href="#"  role="button">Editar</a>
+                                <a name=""id="" class="btn btn-info" href="editar.php"  role="button">Editar</a>
                                 <a name=""id="" class="btn btn-danger" href="#" role="button">Borrar</a>
                                 
                             </td>
@@ -39,7 +39,7 @@
                             <td>Restaurant del mejor sabor casero</td>
                             <td>#menu</td>
                             <td>
-                                <a name=""id="" class="btn btn-info" href="#"  role="button">Editar</a>
+                                <a name=""id="" class="btn btn-info" href=""  role="button">Editar</a>
                                 <a name=""id="" class="btn btn-danger" href="#" role="button">Borrar</a>
                             </td>
                         </tr>

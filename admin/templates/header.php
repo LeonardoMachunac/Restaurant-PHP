@@ -1,5 +1,5 @@
 <?php
-$url_base="http://localhost/restaurant/";
+$url_base="http://localhost/restaurant/admin/";
 
 ?>
 
@@ -33,6 +33,8 @@ $url_base="http://localhost/restaurant/";
             
         </header>
 
-    </body>
+    <main>
+
+    </main>
 
     <section class="container">

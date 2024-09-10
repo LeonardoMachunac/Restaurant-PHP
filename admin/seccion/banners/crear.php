@@ -19,6 +19,10 @@
             <input type="text"class="form-control"name="link"id="link"aria-describedby="helpId"placeholder="Escribe el enlace"/>
         </div>
 
+            <button type="submit" class="btn btn-success">Crear banner</button>
+            <a name=""id=""class="btn btn-primary"href="index.php"role="button">Cancelar</a>
+            
+
 
         </form>
     </div>
