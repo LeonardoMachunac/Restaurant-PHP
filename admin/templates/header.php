@@ -21,15 +21,18 @@ $url_base="http://localhost/restaurant/";
                 <div class="nav navbar-nav">
                     <a class="nav-item nav-link active" href="#" aria-current="page">Administrador <span class="visually-hidden">(current)</span></a>
                     
-                    <a class="nav-item nav-link" href="<?php echo $url_base;?>/seccion/banners/">Banners</a>
-                    <a class="nav-item nav-link" href="<?php echo $url_base;?>/seccion/colaboradores/">Colaboradores</a>
-                    <a class="nav-item nav-link" href="<?php echo $url_base;?>/seccion/testimonios/">Testimonios</a>
-                    <a class="nav-item nav-link" href="<?php echo $url_base;?>/seccion/menu/">Menú</a>
-                    <a class="nav-item nav-link" href="<?php echo $url_base;?>/seccion/comentatio/">Comentarios</a>
-                    <a class="nav-item nav-link" href="<?php echo $url_base;?>/seccion/banners/">Cesarr Sesion</a>
+                    <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/banners/">Banners</a>
+                    <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/colaboradores/">Colaboradores</a>
+                    <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/testimonios/">Testimonios</a>
+                    <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/menu/">Menú</a>
+                    <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/comentatio/">Comentarios</a>
+                    <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/usuario/">Usuarios</a>
+                    <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/banners/">Cesarr Sesion</a>
                 </div>
             </nav>
             
         </header>
 
     </body>
+
+    <section class="container">
