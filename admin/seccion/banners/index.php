@@ -54,7 +54,7 @@
                             <td><?php echo $value['descripcion']; ?></td>
                             <td><?php echo $value['link']; ?></td>
                             <td>
-                                <a name=""id="" class="btn btn-info" href="editar.php"  role="button">Editar</a>
+                                <a name=""id="" class="btn btn-info" href="editar.php?txtID=<?php echo $value['ID']?>"  role="button">Editar</a>
                                 <a name=""id="" class="btn btn-danger" href="index.php?txtID=<?php echo $value['ID']; ?>" role="button">Borrar</a>
                                 
                             </td>
