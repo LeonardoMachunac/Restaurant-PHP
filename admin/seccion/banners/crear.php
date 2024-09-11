@@ -18,7 +18,7 @@ include ("../../templates/header.php");
 
 
         $sentencia->execute();
-        header("Location:index.php"); 
+        header("Location:index.php");
     }
 
 
