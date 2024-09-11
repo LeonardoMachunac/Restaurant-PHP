@@ -1,4 +1,28 @@
-<?php include ("../../templates/header.php");?>
+<?php 
+include ("../../bd.php");
+include ("../../templates/header.php");
+
+    if($_POST){
+        $titulo=(isset($_POST["titulo"]))?$_POST["titulo"]:"";
+        $descripcion=(isset($_POST["descripcion"]))?$_POST["descripcion"]:"";
+        $link=(isset($_POST["link"]))?$_POST["link"]:"";
+
+        $sentencia=$conexion->prepare("INSERT INTO `tbl_banners` 
+        (`ID`, `titulo`, `descripcion`, `link`) 
+        VALUES (NULL, :titulo, :descripcion,:link);");
+
+
+        $sentencia->bindParam(":titulo",$titulo);
+        $sentencia->bindParam(":descripcion",$descripcion);
+        $sentencia->bindParam(":link",$link);
+
+
+        $sentencia->execute();
+        header("Location:index.php"); 
+    }
+
+
+?>
 <br/>
 <div class="card">
     <div class="card-header">Banners</div>
