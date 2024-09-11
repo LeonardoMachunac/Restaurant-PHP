@@ -1,6 +1,17 @@
 <?php  
     include ("../../bd.php");
 
+    if(isset($_GET['txtID'])){
+        $txtID=(isset($_GET["txtID"]))? $_GET["txtID"]:"";
+
+        $sentencia=$conexion->prepare("DELETE FROM tbl_banners WHERE ID=:id ");
+        $sentencia->bindParam(":id", $txtID);
+        $sentencia->execute();
+        header("Location:index.php");
+
+    }
+
+
     $sentencia=$conexion->prepare("SELECT * FROM `tbl_banners`");
     $sentencia->execute();
     $lista_banners= $sentencia->fetchAll(PDO::FETCH_ASSOC);
@@ -38,7 +49,7 @@
                             foreach ($lista_banners as $key => $value) {  ?>
                                 <tr class="">
 
-                            <td scope="row">1</td>
+                            <td scope="row"><?php echo $value['ID']; ?></td>
                             <td><?php echo $value['titulo']; ?></td>
                             <td><?php echo $value['descripcion']; ?></td>
                             <td><?php echo $value['link']; ?></td>
