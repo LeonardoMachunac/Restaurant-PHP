@@ -15,10 +15,36 @@ $registro=$sentencia->fetch(PDO::FETCH_LAZY);
 $titulo=$registro["titulo"];
 $descripcion=$registro["descripcion"];
 $link=$registro["link"];
+}
+if($_POST){
+    $titulo=(isset($_POST["titulo"]))?$_POST["titulo"]:"";
+    $descripcion=(isset($_POST["descripcion"]))?$_POST["descripcion"]:"";
+    $link=(isset($_POST["link"]))?$_POST["link"]:"";
+    $txtID=(isset($_POST["txtID"]))?$_POST["txtID"]:"";
 
-// 
+    $sentencia=$conexion->prepare("UPDATE `tbl_banners` SET 
+    titulo=:titulo,descripcion=:descripcion ,link=:link 
+    WHERE ID=:id ");
+
+
+    $sentencia->bindParam(":titulo",$titulo);
+    $sentencia->bindParam(":descripcion",$descripcion);
+    $sentencia->bindParam(":link",$link);
+    $sentencia->bindParam(":id",$txtID);
+
+
+    $sentencia->execute();
+    header("Location:index.php");
+
+
+
+
+
+    print_r($_POST);
 
 }
+
+
 
 include ("../../templates/header.php");
 
