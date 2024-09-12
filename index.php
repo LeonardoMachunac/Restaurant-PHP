@@ -1,3 +1,12 @@
+<?php
+include("admin/bd.php");
+
+
+$sentencia=$conexion->prepare("SELECT * FROM  tbl_banners ORDER BY id ASC limit 1"); //DESC
+$sentencia->execute();
+$lista_banners= $sentencia->fetchAll(PDO::FETCH_ASSOC);
+// print_r($lista_banners);
+?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -8,10 +17,6 @@
         <!-- Bootstrap CSS v5.2.1 -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-
-
-
-
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -53,9 +58,20 @@
             <div class="banner-img" style="position: relative; background:url('img/slider-image1.jpg') center/cover no-repeat; height:400px;" >
                 <div class="banner-text" style="position:absolute;top:50%; left:50%; transform: translate(-50%,-50%); text-align:center; color:#fff;">
 
-                    <h1>La Sombra</h1>
-                    <p>Restaurant del mejor sabor casero</p>
-                    <a href="#menu" class="btn btn-primary">Ver Menú</a>
+                    <?php
+                        foreach($lista_banners as $banner) {
+
+                        
+                    ?>
+
+                    <h1><?php echo $banner['titulo'];?></h1>
+                    <p><?php echo $banner['descripcion'];?></p>
+                    <a href="<?php echo $banner['link'];?>" class="btn btn-primary">Ver Menú</a>
+                        <?php  }
+                        
+                        ?>
+
+
                 </div>
 
             </div>
