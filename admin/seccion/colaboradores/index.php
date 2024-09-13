@@ -1,6 +1,6 @@
 <?php
 include ("../../bd.php");
-include ("../../templates/header.php");
+
 
 
 $sentencia=$conexion->prepare("SELECT * FROM `tbl_colaboradores`");
@@ -10,7 +10,7 @@ $lista_colaboradores= $sentencia->fetchAll(PDO::FETCH_ASSOC);
 // print_r($lista_colaboradores);
 
 
-
+include ("../../templates/header.php");
 ?>
 
 
