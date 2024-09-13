@@ -1,6 +1,14 @@
 <?php
 if($_POST){
     print_r($_POST);
+
+    $titulo=(isset($_POST['titulo']))?$_POST['titulo']:""; 
+    $descripcion=(isset($_POST['descripcion']))?$_POST['descripcion']:""; 
+    $linkfacebook=(isset($_POST['linkfacebook']))?$_POST['linkfacebook']:""; 
+    $linkinstagram=(isset($_POST['linkinstagram']))?$_POST['linkinstagram']:""; 
+    $linklinkedin=(isset($_POST['linklinkedin']))?$_POST['linklinkedin']:"";
+    $foto=(isset($_POST['foto']))?$_POST['foto']:"";
+
 }
 
 
@@ -48,7 +56,7 @@ include ("../../templates/header.php");
                 
             </div>
 
-            <button type="submit" class="btn btn-success">Agregar Colaboradores </button>
+            <button type="submit" class="btn btn-success">Agregar Colaboradores </button> </br></br>
             <a name=""id=""class="btn btn-primary"href="index.php"role="button">Cancelar</a>
             
             
@@ -69,5 +77,4 @@ include ("../../templates/header.php");
 
 
 
-<?php include ("../../templates/footer.php"); 
-?>
+<?php include ("../../templates/footer.php"); ?>
