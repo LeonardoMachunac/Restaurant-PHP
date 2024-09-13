@@ -1,7 +1,20 @@
 <?php
 include ("../../bd.php");
 include ("../../templates/header.php");
+
+
+$sentencia=$conexion->prepare("SELECT * FROM `tbl_colaboradores`");
+$sentencia->execute();
+$lista_colaboradores= $sentencia->fetchAll(PDO::FETCH_ASSOC);
+
+// print_r($lista_colaboradores);
+
+
+
 ?>
+
+
+
 </br>
 
 <div class="card">
@@ -17,25 +30,36 @@ include ("../../templates/header.php");
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">titulo</th>
-                        <th scope="col">foto</th>
-                        <th scope="col">descripcion</th>
-                        <th scope="col">linkfacebook</th>
-                        <th scope="col">linkinstagram</th>
-                        <th scope="col">linklinkedin</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Foto</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Redes Sociales</th>
                         
                     </tr>
                 </thead>
                 <tbody>
+
+                    <?php foreach ($lista_colaboradores as $key => $value) {?>
+
                     <tr class="">
-                        <td scope="row">1</td>
-                        <td>pedro chef</td>
-                        <td>img.jpg</td>
-                        <td>el cachudo</td>
-                        <td>facebook</td>
-                        <td>IG</td>
-                        <td>linkedin</td>
+                        <td scope="row"><?php echo $value['ID']; ?></td>
+                        <td><?php echo $value['titulo']; ?></td>
+                        <td><?php echo $value['foto']; ?></td>
+                        <td><?php echo $value['descripcion']; ?></td>
+                        <td>
+                            <?php echo $value['linkfacebook']; ?> <br>
+                            <?php echo $value['linkinstagram']; ?>	<br>	
+                            <?php echo $value['linklinkedin']; ?>	
+
+                        </td>
+                       
+                        <td>
+                                <a name=""id="" class="btn btn-info" href="editar.php?txtID=<?php echo $value['ID']?>"  role="button">Editar</a>
+                                <a name=""id="" class="btn btn-danger" href="index.php?txtID=<?php echo $value['ID']; ?>" role="button">Borrar</a>
+                                
+                            </td>
                     </tr>
+                    <?php } ?>
                     
                 </tbody>
             </table>
