@@ -1,15 +1,45 @@
-<?php
-if($_POST){
-    print_r($_POST);
+<?php include ("../../bd.php");
+    if($_POST){
+    
 
-    $titulo=(isset($_POST['titulo']))?$_POST['titulo']:""; 
-    $descripcion=(isset($_POST['descripcion']))?$_POST['descripcion']:""; 
-    $linkfacebook=(isset($_POST['linkfacebook']))?$_POST['linkfacebook']:""; 
-    $linkinstagram=(isset($_POST['linkinstagram']))?$_POST['linkinstagram']:""; 
-    $linklinkedin=(isset($_POST['linklinkedin']))?$_POST['linklinkedin']:"";
-    $foto=(isset($_POST['foto']))?$_POST['foto']:"";
+        $titulo=(isset($_POST['titulo']))?$_POST['titulo']:""; 
+        $descripcion=(isset($_POST['descripcion']))?$_POST['descripcion']:""; 
+        $linkfacebook=(isset($_POST['linkfacebook']))?$_POST['linkfacebook']:""; 
+        $linkinstagram=(isset($_POST['linkinstagram']))?$_POST['linkinstagram']:""; 
+        $linklinkedin=(isset($_POST['linklinkedin']))?$_POST['linklinkedin']:"";
+        
+    
+        // print_r($_POST); //para imprimir
+        // echo $titulo;  //para ver si esta llegando
+    
+        $sentencia = $conexion->prepare (
+        "INSERT INTO `tbl_colaboradores` 
+        (`ID`, `titulo`, `descripcion`, `linkfacebook`, `linkinstagram`, `linklinkedin`, `foto`) 
+        VALUES (NULL,:titulo,:descripcion,:linkfacebook,:linkinstagram,:linklinkedin,:foto);");
+    
+            $foto=(isset($_FILES['foto']["name"]))?$_FILES['foto']["name"]:"";
+            $fecha_foto= new DateTime();
+            $nombre_foto=$fecha_foto->getTimestamp()."_".$foto;
+            $tmp_foto= $_FILES["foto"]["tmp_name"];
+            
+            if($tmp_foto!=""){
+                move_uploaded_file($tmp_foto,$nombre_foto);
+            }
 
-}
+
+        $sentencia->bindParam(":foto",$nombre_foto);
+        $sentencia->bindParam(":titulo",$titulo);
+        $sentencia->bindParam(":descripcion",$descripcion);
+        $sentencia->bindParam(":linkfacebook",$linkfacebook);
+        $sentencia->bindParam(":linkinstagram",$linkinstagram);
+        $sentencia->bindParam(":linklinkedin",$linklinkedin);
+
+
+        $sentencia->execute();
+    
+    }
+
+
 
 
 include ("../../templates/header.php");
@@ -69,7 +99,6 @@ include ("../../templates/header.php");
     </div>
     <div class="card-footer text-muted"></div>
 </div>
-
 
 
 
