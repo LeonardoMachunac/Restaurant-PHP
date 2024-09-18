@@ -2,19 +2,26 @@
 include ("../../bd.php");
 
 
+if(isset($_GET['txtID'])){
+
+$txtID=(isset($_GET["txtID"]))?$_GET["txtID"]:"";
+
+
+$sentencia=$conexion->prepare("SELECT * FROM  tbl_colaboradores  WHERE ID=id");
+$sentencia->bindParam(":id",$txtID);
+$sentencia->execute();
+
+header("Location:index.php");
+
+// print_r($lista_colaboradores);
+}
 
 $sentencia=$conexion->prepare("SELECT * FROM `tbl_colaboradores`");
 $sentencia->execute();
 $lista_colaboradores= $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
-// print_r($lista_colaboradores);
-
-
 include ("../../templates/header.php");
 ?>
-
-
-
 </br>
 
 <div class="card">
@@ -44,7 +51,10 @@ include ("../../templates/header.php");
                     <tr class="">
                         <td scope="row"><?php echo $value['ID']; ?></td>
                         <td><?php echo $value['titulo']; ?></td>
-                        <td><?php echo $value['foto']; ?></td>
+                        <td>
+                            <img src="../../../img/colaboradores/<?php echo $value["foto"];?>" alt="" width="50" srcset="">
+                        </td>
+
                         <td><?php echo $value['descripcion']; ?></td>
                         <td>
                             <?php echo $value['linkfacebook']; ?> <br>

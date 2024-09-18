@@ -1,15 +1,13 @@
 <?php include ("../../bd.php");
-    if($_POST){
-    
 
+    if($_POST){
         $titulo=(isset($_POST['titulo']))?$_POST['titulo']:""; 
         $descripcion=(isset($_POST['descripcion']))?$_POST['descripcion']:""; 
         $linkfacebook=(isset($_POST['linkfacebook']))?$_POST['linkfacebook']:""; 
         $linkinstagram=(isset($_POST['linkinstagram']))?$_POST['linkinstagram']:""; 
         $linklinkedin=(isset($_POST['linklinkedin']))?$_POST['linklinkedin']:"";
         
-    
-        // print_r($_POST); //para imprimir
+        // p rint_r($_POST); //para imprimir
         // echo $titulo;  //para ver si esta llegando
     
         $sentencia = $conexion->prepare (
@@ -23,13 +21,13 @@
             $tmp_foto= $_FILES["foto"]["tmp_name"];
             
             if($tmp_foto!=""){
-                move_uploaded_file($tmp_foto,$nombre_foto);
+                move_uploaded_file($tmp_foto,"../../../img/colaboradores/".$nombre_foto);
             }
 
 
         $sentencia->bindParam(":foto",$nombre_foto);
         $sentencia->bindParam(":titulo",$titulo);
-        $sentencia->bindParam(":descripcion",$descripcion);
+        $sentencia->bindParam(":descripcion",$descripcion); 
         $sentencia->bindParam(":linkfacebook",$linkfacebook);
         $sentencia->bindParam(":linkinstagram",$linkinstagram);
         $sentencia->bindParam(":linklinkedin",$linklinkedin);
@@ -43,15 +41,18 @@
 
 
 include ("../../templates/header.php");
+
+
 ?>
 <br/>
 <div class="card">
     <div class="card-header">Colaboradores</div>
     <div class="card-body">
         <form action="" method="post" enctype="multipart/form-data"> <!--para adjuntar la foto-->
+
             <div class="mb-3">
                 <label for="foto" class="form-label">Foto:</label>
-                <input type="file" class="form-control"name="foto"id="foto"placeholder=""aria-describedby="fileHelpId"/>
+                <input type="file" class="form-control" name="foto" id="foto"placeholder=" "aria-describedby="fileHelpId"/>
             
             </div>
             
@@ -81,7 +82,7 @@ include ("../../templates/header.php");
             </div>
 
             <div class="mb-3">
-                <label for="linklinkedin" class="form-label">Lnkedin:</label>
+                <label for="linklinkedin" class="form-label">Linkedin:</label>
                 <input type="text"class="form-control"name="linklinkedin"id="linklinkedin"aria-describedby="helpId" placeholder=""/>
                 
             </div>
