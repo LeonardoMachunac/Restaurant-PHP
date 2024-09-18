@@ -7,7 +7,13 @@ if(isset($_GET['txtID'])){
 $txtID=(isset($_GET["txtID"]))?$_GET["txtID"]:"";
 
 
-$sentencia=$conexion->prepare("SELECT * FROM  tbl_colaboradores  WHERE ID=id");
+//proceso de borrado que busque la imagen y la pueda borrar
+$sentencia=$conexion->prepare("SELECT * FROM `tbl_colaboradores`");
+$sentencia->execute();
+
+
+
+$sentencia=$conexion->prepare("DELETE  FROM  tbl_colaboradores  WHERE ID=:id");
 $sentencia->bindParam(":id",$txtID);
 $sentencia->execute();
 
@@ -64,7 +70,7 @@ include ("../../templates/header.php");
                         </td>
                        
                         <td>
-                                <a name=""id="" class="btn btn-info" href="editar.php?txtID=<?php echo $value['ID']?>"  role="button">Editar</a>
+                                <a name=""id="" class="btn btn-info" href="editar.php?txtID=<?php echo $value['ID'] ?>"  role="button">Editar</a>
                                 <a name=""id="" class="btn btn-danger" href="index.php?txtID=<?php echo $value['ID']; ?>" role="button">Borrar</a>
                                 
                             </td>
