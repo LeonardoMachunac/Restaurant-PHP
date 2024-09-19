@@ -34,6 +34,7 @@
 
 
         $sentencia->execute();
+        header("Location:index.php");
     
     }
 
