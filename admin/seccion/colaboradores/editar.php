@@ -1,6 +1,5 @@
 <?php 
 include ("../../bd.php");
-
     if(isset($_GET['txtID'])){
         $txtID=(isset($_GET["txtID"]))?$_GET["txtID"]:"";
 
@@ -18,12 +17,6 @@ include ("../../bd.php");
         $linkinstagram=$registro["linkinstagram"];
         $linklinkedin=$registro["linklinkedin"];
     }
-
-
-
-
-
-
 
 include ("../../templates/header.php"); ?>
 
@@ -74,19 +67,9 @@ include ("../../templates/header.php"); ?>
             <button type="submit" class="btn btn-success">Modificar Colaborador </button> </br></br>
             <a name=""id=""class="btn btn-primary"href="index.php"role="button">Cancelar</a>
             
-            
-            
-
-
-            
         </form>
-
     </div>
     <div class="card-footer text-muted"></div>
 </div>
-
-
-
-
 
 <?php include ("../../templates/footer.php"); ?>
