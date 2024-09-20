@@ -5,8 +5,20 @@ include("admin/bd.php");
 $sentencia=$conexion->prepare("SELECT * FROM  tbl_banners ORDER BY id ASC limit 1"); //DESC
 $sentencia->execute();
 $lista_banners= $sentencia->fetchAll(PDO::FETCH_ASSOC);
-// print_r($lista_banners);
+
+
+
+$sentencia=$conexion->prepare("SELECT * FROM  tbl_colaboradores ORDER BY id DESC  "); //DESC
+$sentencia->execute();
+$lista_colaboradores= $sentencia->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
+
+
+
+
+
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -58,11 +70,7 @@ $lista_banners= $sentencia->fetchAll(PDO::FETCH_ASSOC);
             <div class="banner-img" style="position: relative; background:url('img/slider-image1.jpg') center/cover no-repeat; height:400px;" >
                 <div class="banner-text" style="position:absolute;top:50%; left:50%; transform: translate(-50%,-50%); text-align:center; color:#fff;">
 
-                    <?php
-                        foreach($lista_banners as $banner) {
-
-                        
-                    ?>
+                    <?php foreach($lista_banners as $banner) { ?>
 
                     <h1><?php echo $banner['titulo'];?></h1>
                     <p><?php echo $banner['descripcion'];?></p>
@@ -92,62 +100,31 @@ $lista_banners= $sentencia->fetchAll(PDO::FETCH_ASSOC);
         <section id="chefs" class="container mt-4 text-center">
             <h2>Nuestros Chefs</h2>
                 <div class="row">
+
+                        <?php foreach($lista_colaboradores as $colaborador){?>
+                        
                     <div class="col-md-4">
+
                         <div class="card">
-                            <img src="img/colaboradores/team-image1.jpg" class="card-img-top" alt="Chef 1"/>
+                            <img src="img/colaboradores/<?php echo $colaborador["foto"];?>" class="card-img-top" alt="Chef 3"/>
 
                             <div class="card-body">
-                        <h5 class="card-title">Chef 1</h5>
-                            <p class="card-text">La Chef Maria.</p>
+                        <h5 class="card-title"><?php echo $colaborador["titulo"];?></h5>
+                            <p class="card-text"><?php echo $colaborador["descripcion"];?></p>
 
                             <div class="social-icons mt-3">
-                                <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
-                                <a href="#" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
-                                <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
-
-                            </div>
-
-                        </div>
-
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="img/colaboradores/team-image2.jpg" class="card-img-top" alt="Chef 2"/>
-
-                            <div class="card-body">
-                        <h5 class="card-title">Chef 2</h5>
-                            <p class="card-text">La Chef Luisa.</p>
-
-                            <div class="social-icons mt-3">
-                                <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
-                                <a href="#" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
-                                <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
+                                <a href="<?php echo $colaborador["linkfacebook"];?>" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
+                                <a href="<?php echo $colaborador["linkinstagram"];?>" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
+                                <a href="<?php echo $colaborador["linklinkedin"];?>" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="img/colaboradores/team-image3.jpg" class="card-img-top" alt="Chef 3"/>
 
-                            <div class="card-body">
-                        <h5 class="card-title">Chef 3</h5>
-                            <p class="card-text">La Chef Karla.</p>
-
-                            <div class="social-icons mt-3">
-                                <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
-                                <a href="#" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
-                                <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
-                            </div>
-                        </div>
-                        </div>
+                    <?php } ?>
                     </div>
-                </div>
+
+                
         </section>
                     <!--Fin de testimonios-->
 

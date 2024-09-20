@@ -20,7 +20,7 @@ include ("../../bd.php");
 
         $sentencia->bindParam(":titulo",$titulo);
         $sentencia->bindParam(":descripcion",$descripcion);
-        $sentencia->bindParam(":linkfacebook",$linkfacebookn);
+        $sentencia->bindParam(":linkfacebook",$linkfacebook);
         $sentencia->bindParam(":linkinstagram",$linkinstagram);
         $sentencia->bindParam(":linklinkedin",$linklinkedin);
         $sentencia->bindParam(":id",$txtID);
