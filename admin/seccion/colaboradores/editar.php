@@ -1,5 +1,16 @@
 <?php 
 include ("../../bd.php");
+    if($_POST){
+        $titulo=(isset($_POST['titulo']))?$_POST['titulo']:""; 
+        $descripcion=(isset($_POST['descripcion']))?$_POST['descripcion']:""; 
+        $linkfacebook=(isset($_POST['linkfacebook']))?$_POST['linkfacebook']:""; 
+        $linkinstagram=(isset($_POST['linkinstagram']))?$_POST['linkinstagram']:""; 
+        $linklinkedin=(isset($_POST['linklinkedin']))?$_POST['linklinkedin']:"";
+        
+    }
+
+
+
     if(isset($_GET['txtID'])){
         $txtID=(isset($_GET["txtID"]))?$_GET["txtID"]:"";
 

@@ -3,6 +3,7 @@ include ("../../bd.php");
 include ("../../templates/header.php");
 
     if($_POST){
+        
         $titulo=(isset($_POST["titulo"]))?$_POST["titulo"]:"";
         $descripcion=(isset($_POST["descripcion"]))?$_POST["descripcion"]:"";
         $link=(isset($_POST["link"]))?$_POST["link"]:"";
