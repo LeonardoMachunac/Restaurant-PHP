@@ -15,10 +15,6 @@ $lista_colaboradores= $sentencia->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 
-
-
-
-
 <!doctype html>
 <html lang="en">
     <head>
