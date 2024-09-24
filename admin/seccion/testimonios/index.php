@@ -10,7 +10,7 @@ $lista_testimonios= $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
 
 
- include ("../../templates/header.php"); ?>
+include ("../../templates/header.php"); ?>
 
 <br/>
 
