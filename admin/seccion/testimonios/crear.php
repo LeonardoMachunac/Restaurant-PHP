@@ -1,4 +1,27 @@
-<?php include ("../../templates/header.php"); ?>
+<?php 
+include ("../../bd.php");
+
+
+    if($_POST){
+        print_r($_POST);
+
+        $sentencia=$conexion->prepare("INSERT INTO 
+        `tbl_testimonio` (`ID`, `opinion`, `nombre`) 
+        VALUES (NULL, 'todo estubo rico', 'carlos');");
+        
+        $sentencia->execute();
+
+    }
+
+
+
+include ("../../templates/header.php"); 
+
+
+?>
+
+
+
 
 <br/>
 
