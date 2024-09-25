@@ -5,11 +5,19 @@ include ("../../bd.php");
     if($_POST){
         print_r($_POST);
 
+        $opinion=(isset($_POST["opinion"]))?$_POST["opinion"]:"";
+        $nombre=(isset($_POST["nombre"]))?$_POST["nombre"]:"";
+
         $sentencia=$conexion->prepare("INSERT INTO 
         `tbl_testimonio` (`ID`, `opinion`, `nombre`) 
-        VALUES (NULL, 'todo estubo rico', 'carlos');");
+        VALUES (NULL,:opinion,:nombre);"); 
+
+
+        $sentencia->bindParam(":opinion" , $opinion);
+        $sentencia->bindParam(":nombre" , $nombre);
         
         $sentencia->execute();
+        header("Location:index.php");
 
     }
 
@@ -41,7 +49,7 @@ include ("../../templates/header.php");
     </div>
 
     <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre;</label>
+        <label for="nombre" class="form-label">Nombre:</label>
         <input type="text"class="form-control"name="nombre"id="nombre"aria-describedby="helpId"placeholder="Nombre"/>
     </div>
 

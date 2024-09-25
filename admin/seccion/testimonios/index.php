@@ -2,6 +2,19 @@
 include ("../../bd.php");
 
 
+if(isset($_GET["txtID"])){
+
+    $txtID=(isset($_GET["txtID"]))?$_GET["txtID"]:"";
+    $sentencia=$conexion->prepare("DELETE  FROM  tbl_testimonio  WHERE ID=:id");
+    $sentencia->bindParam(":id",$txtID);
+    $sentencia->execute();
+
+
+    header("Location:index.php");
+
+}
+
+
 $sentencia=$conexion->prepare("SELECT *  FROM  `tbl_testimonio`");
 $sentencia->execute();
 $lista_testimonios= $sentencia->fetchAll(PDO::FETCH_ASSOC);
