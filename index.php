@@ -12,6 +12,11 @@ $sentencia=$conexion->prepare("SELECT * FROM  tbl_colaboradores ORDER BY id DESC
 $sentencia->execute();
 $lista_colaboradores= $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
+
+$sentencia=$conexion->prepare("SELECT * FROM  tbl_testimonio ORDER BY id DESC limit 2  "); //DESC
+$sentencia->execute();
+$lista_testimonios= $sentencia->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 
@@ -129,29 +134,22 @@ $lista_colaboradores= $sentencia->fetchAll(PDO::FETCH_ASSOC);
                 <div class="container">
                     <h2 class="text-center mb-4">Testimonios</h2>
                     <div class="row">
-                        <div class="col-md-6 d-flex">
-                            <div class="card mb-4 w-100">
-                                <div class="card-body">
-                                    <p class="card-text">Muy buena comida</p>
-                                </div>
-                                <div class="card-footer text-muted">
-                                    Oscar Uh
 
-                                </div>
+                            
+                            <?php  foreach ($lista_testimonios as $testimonio){ ?>
 
-                            </div>
-                        </div>
 
                         <div class="col-md-6 d-flex">
                             <div class="card mb-4 w-100">
                                 <div class="card-body">
-                                    <p class="card-text">Excelte  comida</p>
+                                    <p class="card-text"><?php  echo $testimonio["opinion"]?></p>
                                 </div>
                                 <div class="card-footer text-muted">
-                                    Luis AF
+                                <?php  echo $testimonio["nombre"]?>
                                 </div>
                             </div>
                         </div>
+                        <?php   }?>
                     </div>
                 </div>
             </section>

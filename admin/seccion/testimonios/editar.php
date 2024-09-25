@@ -15,6 +15,20 @@ if(isset($_GET["txtID"])){
     
     }
 
+    if($_POST){
+        $txtID=(isset($_POST["txtID"]))?$_POST["txtID"]:"";
+        $opinion=(isset($_POST["opinion"]))?$_POST["opinion"]:"";
+        $nombre=(isset($_POST["nombre"]))?$_POST["nombre"]:"";
+
+
+        $sentencia=$conexion->prepare("UPDATE tbl_testimonio SET opinion=:opinion,nombre=:nombre WHERE ID=:id");
+        $sentencia->bindParam(":ID",$txtID);      
+        $sentencia->bindParam(":opinion",$opinion);
+        $sentencia->bindParam(":nombre",$nombre);
+        $sentencia->execute();
+
+    }       
+
 
 
 
@@ -35,6 +49,14 @@ include ("../../templates/header.php"); ?>
     <form action="" method="post" enctype="multipart/form-data"> <!--para adjuntar la foto-->
 
     <div class="mb-3">
+        <label for="" class="form-label">ID:</label>
+        <input type="text" class="form-control" value="<?php echo $txtID; ?>" name="txtID"id="txtID"aria-describedby="helpId" placeholder=""/>
+        
+    </div>
+    
+
+
+    <div class="mb-3">
         <label for="" class="form-label">Opinion:</label>
         <input type="text"class="form-control" value="<?php echo $opinion; ?>" name="opinion"id="opinion"aria-describedby="helpId"placeholder="Opinion"/>
     </div>
@@ -44,7 +66,7 @@ include ("../../templates/header.php"); ?>
         <input type="text"class="form-control" value="<?php echo $nombre; ?>"name="nombre"id="nombre"aria-describedby="helpId"placeholder="Nombre"/>
     </div>
 
-    <button type="submit" class="btn btn-success">Agregar Testimonios </button> 
+    <button type="submit" class="btn btn-success">Modificar Testimonios </button> 
             <a name=""id=""class="btn btn-primary"href="index.php"role="button">Cancelar</a>
             
     
