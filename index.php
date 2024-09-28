@@ -17,6 +17,12 @@ $sentencia=$conexion->prepare("SELECT * FROM  tbl_testimonio ORDER BY id DESC li
 $sentencia->execute();
 $lista_testimonios= $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
+
+
+$sentencia=$conexion->prepare("SELECT * FROM  tbl_menu ORDER BY id DESC limit 4  "); //DESC
+$sentencia->execute();
+$lista_menu= $sentencia->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 
@@ -160,46 +166,20 @@ $lista_testimonios= $sentencia->fetchAll(PDO::FETCH_ASSOC);
                 <h2 class="text-center">Menu (nuestra recomendacion) </h2>
                 <br/>
                 <div class="row row-cols-1 row-cols-md-4 g-4">
-                    <div class="col d-flex">
-                        <div class="card">
-                            <img src="img/menu/menu-image1.jpg" class="card-img-top" alt="Tortillas de maiz con carne y flijoles negros">
-                            <div class="card-body">
-                                <h5 class="card-title">Tortillas de maiz con carne y frijoles negros</h5>
-                                <p class="card-text small"> <strong>Ingredientes:</strong> Arroz,frijoles </p>
-                                <p class="card-text"> <strong> Precio: </strong> $3.99</p>
-                            </div>
-                        </div>
-                    </div>
+
+                                <?php foreach ($lista_menu as $registro){ ?>
 
                     <div class="col d-flex">
                         <div class="card">
-                            <img src="img/menu/menu-image2.jpg" class="card-img-top" alt="Tortillas de maiz con carne y flijoles negros">
+                            <img src="img/menu/<?php echo $registro["foto"]?>" class="card-img-top" alt="Tortillas de maiz con carne y flijoles negros">
                             <div class="card-body">
-                                <h5 class="card-title">Tortillas de maiz con carne y frijoles negros</h5>
-                                <p class="card-text"> <strong> Precio: </strong> $3.99</p>
+                                <h5 class="card-title"><?php echo $registro["nombre"]?></h5>
+                                <p class="card-text small"> <strong><?php echo $registro["ingredientes"]?></strong></p>
+                                <p class="card-text"><strong> Precio:</strong>$ <?php echo $registro["precio"]?></p>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col d-flex">
-                        <div class="card">
-                            <img src="img/menu/menu-image3.jpg" class="card-img-top" alt="Tortillas de maiz con carne y flijoles negros">
-                            <div class="card-body">
-                                <h5 class="card-title">Tortillas de maiz con carne y frijoles negros</h5>
-                                <p class="card-text"> <strong> Precio: </strong> $3.99</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col d-flex">
-                        <div class="card">
-                            <img src="img/menu/menu-image3.jpg" class="card-img-top" alt="Tortillas de maiz con carne y flijoles negros">
-                            <div class="card-body">
-                                <h5 class="card-title">Tortillas de maiz con carne y frijoles negros</h5>
-                                <p class="card-text"> <strong> Precio: </strong> $3.99</p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php }?>
 
                 </div>
             </section>
