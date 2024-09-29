@@ -1,5 +1,5 @@
 <?php
-    
+    session_start();
     if($_POST){
         include ("bd.php");
         
@@ -15,9 +15,17 @@
         $sentencia->bindParam(":usuario",$usuario);
         $sentencia->bindParam(":password",$password);
         $sentencia->execute();
+
         $lista_usuarios=$sentencia->fetch(PDO::FETCH_LAZY);
         $n_usuario=$lista_usuarios["n_usuario"];
-        
+        if($n_usuario==1){
+            $_SESSION["usuario"]=$lista_usuarios["usuario"];
+            $_SESSION["logueado"]=true;
+            header("Location:index.php");
+
+        }else{
+            echo "Usuario o contraseña incorrecta....";
+        }
     }
 
 ?>

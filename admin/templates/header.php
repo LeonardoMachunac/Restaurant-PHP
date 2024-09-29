@@ -1,4 +1,7 @@
 <?php
+session_start();
+print_r($_SESSION);
+
 $url_base="http://localhost/restaurant/admin/";
 
 ?>
@@ -19,7 +22,7 @@ $url_base="http://localhost/restaurant/admin/";
         <header>
             <nav class="navbar navbar-expand navbar-light bg-light">
                 <div class="nav navbar-nav">
-                    <a class="nav-item nav-link active" href="#" aria-current="page">Administrador <span class="visually-hidden">(current)</span></a>
+                    <a class="nav-item nav-link active" href="<?php echo $url_base;?>index.php" aria-current="page">Administrador <span class="visually-hidden">(current)</span></a>
                     
                     <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/banners/">Banners</a>
                     <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/colaboradores/">Colaboradores</a>
@@ -27,7 +30,7 @@ $url_base="http://localhost/restaurant/admin/";
                     <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/menu/">Menú</a>
                     <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/comentarios/">Comentarios</a>
                     <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/usuarios/">Usuarios</a>
-                    <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/cerrarsesion/">Cesarr Sesion</a>
+                    <a class="nav-item nav-link" href="<?php echo $url_base;?>cerrar.php">Cesarr Sesion</a>
                 </div>
             </nav>
             
