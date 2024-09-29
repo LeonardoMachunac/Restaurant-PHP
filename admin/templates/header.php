@@ -1,8 +1,10 @@
 <?php
 session_start();
-print_r($_SESSION);
-
 $url_base="http://localhost/restaurant/admin/";
+if(!isset($_SESSION["usuario"])){
+    header("Location:".$url_base."login.php");
+}
+
 
 ?>
 
