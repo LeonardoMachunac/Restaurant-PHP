@@ -34,6 +34,7 @@ header("Location:index.php"); //redireccionamos
 }
 
 $sentencia=$conexion->prepare("SELECT * FROM `tbl_colaboradores`");
+
 $sentencia->execute();
 $lista_colaboradores= $sentencia->fetchAll(PDO::FETCH_ASSOC);
 
