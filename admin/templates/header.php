@@ -26,8 +26,8 @@ $url_base="http://localhost/restaurant/admin/";
                     <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/testimonios/">Testimonios</a>
                     <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/menu/">Menú</a>
                     <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/comentarios/">Comentarios</a>
-                    <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/usuario/">Usuarios</a>
-                    <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/banners/">Cesarr Sesion</a>
+                    <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/usuarios/">Usuarios</a>
+                    <a class="nav-item nav-link" href="<?php echo $url_base;?>seccion/cerrarsesion/">Cesarr Sesion</a>
                 </div>
             </nav>
             
